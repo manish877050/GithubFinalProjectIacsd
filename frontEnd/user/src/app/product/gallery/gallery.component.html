@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of products">
+    <div class="card" style="margin-top: 20px">
+      <img src="{{ product['image'] }}" alt="" class="card-img-top" />
+      <div class="card-body">
+        <div class="card-title">
+          <strong>{{ product["title"] }}</strong>
+        </div>
+        <div class="category">
+          <strong>Category: </strong>{{ product["brand"]["category"]["title"] }}
+        </div>
+        <div class="card-text">
+          {{ product["description"] }}
+        </div>
+        <div class="price">
+          <strong>Price: </strong>{{ product["price"] }} ₹
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-md-2">
+            <button (click)="addToCart(product,'regular')" class="btn btn-sm btn-success">
+              AddToCart
+            </button>
+          </div>
+          <div class="col-md-10">
+            <button
+              (click)="addToCart(product,'rented')"
+              style="margin-left: 50%"
+              class="btn btn-sm btn-dark float-right"
+            >
+              Rent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

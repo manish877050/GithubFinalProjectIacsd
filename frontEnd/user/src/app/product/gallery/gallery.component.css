@@ -1,0 +1,16 @@
+.user {
+}
+.card-img-top {
+  width: 40%;
+  align-self: center;
+  height: 150px;
+}
+
+.card-img-top:hover {
+  cursor: pointer;
+}
+.card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
